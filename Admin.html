@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rx Battle Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard - Rx Battle</h1>
+  </header>
+
+  <main>
+    <h2>Add New Tournament</h2>
+    <form id="tournamentForm">
+      <input type="text" placeholder="Title" id="title" required />
+      <input type="text" placeholder="Prize" id="prize" required />
+      <input type="text" placeholder="Entry Fee" id="entry" required />
+      <input type="text" placeholder="Time" id="time" required />
+      <button type="submit">Add Tournament</button>
+    </form>
+    <div id="adminTournaments"></div>
+  </main>
+
+  <script>
+    const form = document.getElementById("tournamentForm");
+    const adminTournaments = document.getElementById("adminTournaments");
+
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const title = document.getElementById("title").value;
+      const prize = document.getElementById("prize").value;
+      const entry = document.getElementById("entry").value;
+      const time = document.getElementById("time").value;
+
+      const div = document.createElement("div");
+      div.className = "tournament";
+      div.innerHTML = `
+        <h3>${title}</h3>
+        <p><strong>Prize:</strong> ${prize}</p>
+        <p><strong>Entry:</strong> ${entry}</p>
+        <p><strong>Time:</strong> ${time}</p>
+      `;
+      adminTournaments.appendChild(div);
+
+      form.reset();
+    };
+  </script>
+</body>
+</html>
