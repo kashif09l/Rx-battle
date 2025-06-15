@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+}
+
+header {
+  background: #ff5722;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#ad-top, #ad-bottom {
+  background: #444;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.tournament {
+  background: #222;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border-left: 4px solid #ff9800;
+}
+
+button.join {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
